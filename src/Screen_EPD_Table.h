@@ -53,6 +53,7 @@ typedef struct screenTable_t
 ///
 static const screenTable_t screenTable[] =
 {
+    { SIZE_097, 200, 96 }, ///<  0.97"
     { SIZE_150, 200, 200 }, ///<  1.50"
     { SIZE_152, 200, 200 }, ///<  1.52"
     { SIZE_154, 152, 152 }, ///<  1.54"
