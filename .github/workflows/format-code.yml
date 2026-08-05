@@ -13,6 +13,8 @@ on:
       - '**.c'
       - '**.ino'
   pull_request:
+    # Run when a new PR is opened
+    types: [opened]
     branches:
       - main
       - develop
@@ -22,6 +24,12 @@ on:
       - '**.cpp'
       - '**.c'
       - '**.ino'
+  create:
+    # Run when a tag is created
+    ref_type: tag
+  release:
+    # Run when a new release is created/published
+    types: [created, published]
 
 jobs:
   format:
