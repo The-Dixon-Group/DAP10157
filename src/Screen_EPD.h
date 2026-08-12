@@ -136,7 +136,7 @@ class Screen_EPD final : public hV_Screen_Buffer
     /// @note If pin number used as `flashCS`, then `flashCS` set to `NOT_CONNECTED` and pin number used for `panelPower`
     /// @warning `setPanelPowerPin()` should be called before `begin()`
     ///
-    void setPanelPowerPin(uint8_t panelPowerPin = NOT_CONNECTED);
+    void setPanelPowerPin(PORT_PIN panelPowerPin = NOT_CONNECTED);
 
     /// @brief Set the power profile
     /// @param mode default = `POWER_MODE_AUTO`, otherwise `POWER_MODE_MANUAL`
