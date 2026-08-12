@@ -62,7 +62,8 @@
 
 // Screens table
 #include "Screen_EPD_Table.h"
-
+#include "string.h"
+#include "cstring"
 //
 // === Class section
 //
@@ -170,13 +171,14 @@ void Screen_EPD::begin()
     //
 
     // Report
+    /*
     hV_HAL_log(LEVEL_DEBUG, "Screen %s", WhoAmI().c_str());
     hV_HAL_log(LEVEL_DEBUG, "Size %ix%i", screenSizeX(), screenSizeY());
     hV_HAL_log(LEVEL_DEBUG, "Number %i-%cS-0%c", u_codeSize, u_codeFilm, u_codeDriver);
     hV_HAL_log(LEVEL_DEBUG, "Driver %s", s_driver->reference().c_str());
     hV_HAL_log(LEVEL_DEBUG, "PDLS %s", reference().c_str());
     hV_HAL_Serial_crlf();
-
+*/
     switch (s_driver->d_COG)
     {
         case COG_BWRY_LARGE:
@@ -931,7 +933,7 @@ uint16_t Screen_EPD::s_getPoint(uint16_t x1, uint16_t y1)
 //
 // === Power section
 //
-void Screen_EPD::setPanelPowerPin(uint8_t panelPowerPin)
+void Screen_EPD::setPanelPowerPin(PORT_PIN panelPowerPin)
 {
     s_driver->b_pin.panelPower = panelPowerPin;
     if (s_driver->b_pin.flashCS == panelPowerPin)
